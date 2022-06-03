@@ -38,9 +38,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  var array=[]
-  array.push("elemento");
-   
+  array[array.lenght=elemento];
+    return array
+
 }
 
 
@@ -49,7 +49,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  array[array.length] = elemento;
+  array.unshift("elemento");
   return array;
 }
 
@@ -94,8 +94,12 @@ function agregarNumeros(numeros) {
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
-  // Tu código:
-  return agregarNumeros(resultadosTest) / resultadosTest.length;
+  // Tu código: 
+  var a=Promedio;
+  for(var i=0;i<resultadosTest.lenght;i++){
+  Promedio=resultadosTest[i]/resultadosTest.length
+  }return Promedio;
+
 
 }
 
@@ -109,7 +113,7 @@ function numeroMasGrande(numeros) {
     if(numeros[i] > maximo) { 
       maximo = numeros[i];
     }
-  }
+  } 
   return maximo;
 
 }
@@ -119,15 +123,18 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-    if(arguments.lenght<1){
-      return 0;
-    }var total=1;
+   
+    var total=1;
     for(var i=0;i<arguments.lenght;i++){
       total=total*arguments[i];
+    if(arguments.lenght<1){
+        return 0;
+      }
+    
     }return total;
 }
 
-
+ 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
@@ -159,7 +166,7 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   var num=n.toString()
-  if(num.charAt(0)===9){
+  if(num.charAt(0)==="9"){
     return true;
   }else{
     return false;
@@ -212,7 +219,7 @@ function mayorACien(array) {
     if(array[i] > 100) {
       nuevoArray.push(array[i]);
     }
-  }
+  }return nuevoArray;
 }
 
 
