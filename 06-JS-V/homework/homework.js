@@ -15,7 +15,7 @@ function crearUsuario() {
     this.password= opciones.password
   }
   Usuario.prototype.saludar=function(){
-    return "Hola,mi nombre es" + this,nombre
+    return "Hola,mi nombre es" + this.nombre
   }
   return Usuario;
 }
@@ -25,7 +25,7 @@ function agregarMetodoPrototype(Constructor) {
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
     Constructor.prototype.saludar=function(){
-      return "Hello World";
+      return "Hello World!";
     };
 }
 
@@ -77,7 +77,7 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
-    const Juan=new Persona("Juan","Perez",22,"Saavedra 123");
+    const Juan=new Persona("Juan","Perez","22 años","Saavedra 123");
     return Juan;
 }
   
